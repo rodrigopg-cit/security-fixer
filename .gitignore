@@ -1,0 +1,40 @@
+.env.secrets_and_paths
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+.idea/
+# .env
+venv/
+temp/
+coverage.xml
+.coverage
+.mypy_cache
+htmlcov
+
+# Local .terraform directories
+**/.terraform/*
+
+# .tfstate files
+*.tfstate
+*.tfstate.*
+
+# Ignore CLI configuration files
+.terraformrc
+terraform.rc
+.terraform*
+
+# Ignore Terragrunt files
+.terragrunt*
+.docker
+
+# ignore cosmic artifacts
+.chat.sqlite
+mutation-report.html
+
+output/*
+!output/.gitkeep
+*.log
+*.log.[0-9]
+
+db/
+debug.log

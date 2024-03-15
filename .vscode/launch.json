@@ -1,0 +1,44 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Business Rules",
+      "type": "python",
+      "request": "launch",
+      "program": "src/app.py",
+      "console": "integratedTerminal",
+      "justMyCode": true,
+      "args" : ["--context", "SIA_YDUQS", "--feature_name", "Formação acadêmica -> Alunos -> Acerto de Notas e Frequência", "--gen_business_rules", "--entrypoint_files", "WebSIA/cfa/cfa0220a.asp", "--entrypoint_files_type", "ASP_FILE", "--overwrite_code_business_rule"]
+    },
+    {
+      "name": "Api Server",
+      "type": "python",
+      "request": "launch",
+      "program": "src/app.py",
+      "console": "integratedTerminal",
+      "justMyCode": true,
+      "args" : ["--api-server"]
+    },
+    {
+      "name": "Generate frontend",
+      "type": "python",
+      "request": "launch",
+      "program": "src/app.py",
+      "console": "integratedTerminal",
+      "justMyCode": true,
+      "args" : ["--context", "SIA_YDUQS", "--feature_name", "Formação acadêmica -> Alunos -> Acerto de Notas e Frequência", "--gen_code_frontend", "REACT_LIFT_YDUQS", "--frontend_uidl_json_files", "uidl/busca_escolha_seu_curso.json", "--refinements", "refinamentos/acerto_nota_aluno.txt"]
+    },
+    {
+      "name": "Generate backend and database",
+      "type": "python",
+      "request": "launch",
+      "program": "src/app.py",
+      "console": "integratedTerminal",
+      "justMyCode": true,
+      "args" : ["--context", "SIA_YDUQS", "--feature_name", "Formação acadêmica -> Alunos -> Acerto de Notas e Frequência", "--gen_code_backend", "NESTJS", "--gen_code_database", "ORACLE_DDL", "--refinements", "refinamentos/acerto_nota_aluno.txt"]
+    },
+]
+}
